@@ -33,7 +33,7 @@ const Blog = ({ blogs,handlerBook,handlerReadTime}) => {
                    )
                 }
             </p>
-            <p onClick={()=> handlerReadTime(reading_time)} className='underline text-purple-600 cursor-pointer'>Mark as read</p>
+            <p onClick={()=> handlerReadTime(reading_time,id)} className='underline text-purple-600 cursor-pointer'>Mark as read</p>
         </div>
     );
 };

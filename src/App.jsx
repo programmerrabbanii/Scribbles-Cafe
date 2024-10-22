@@ -8,15 +8,19 @@ function App() {
   const [book,setBook]=useState([])
   const [readTime,setReadTime]=useState(0)
 
-  const handlerReadTime=(times)=>{
-    const newRedingTime=readTime+times
-    setReadTime(newRedingTime)
-  }
-
   const handlerBook=(marks)=>{
     const newBook=[...book,marks]
     setBook(newBook)
   }
+
+  const handlerReadTime=(times)=>{
+    const newRedingTime=readTime+times
+    setReadTime(newRedingTime)
+
+   
+  }  
+
+ 
   return (
     <>
     <Header></Header>
