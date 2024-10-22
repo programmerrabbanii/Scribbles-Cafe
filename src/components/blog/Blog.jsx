@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { BsBookmarksFill } from "react-icons/bs";
 
 
-const Blog = ({ blogs }) => {
+const Blog = ({ blogs,handlerBook,handlerReadTime}) => {
     const { id, cover, title, author_img, author, posted_date, reading_time, hashtags } = blogs;
 
     return (
@@ -19,7 +19,7 @@ const Blog = ({ blogs }) => {
                     </div>
                     <div className='  flex items-center gap-2'>
                         <span>{reading_time} min read</span> 
-                        <button><BsBookmarksFill></BsBookmarksFill></button>
+                        <button onClick={()=>handlerBook(blogs)}><BsBookmarksFill></BsBookmarksFill></button>
                     </div>
                 </div> 
             </div>
@@ -33,6 +33,7 @@ const Blog = ({ blogs }) => {
                    )
                 }
             </p>
+            <p onClick={()=> handlerReadTime(reading_time)} className='underline text-purple-600 cursor-pointer'>Mark as read</p>
         </div>
     );
 };
